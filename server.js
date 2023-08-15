@@ -11,6 +11,7 @@ dotenv.config();
 const app = express();
 
 // middleware if any (auth, cors, etc.)
+app.use(express.json());
 app.use(cors({
     origin: process.env.CLIENT_URI
 }))
